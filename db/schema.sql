@@ -5,10 +5,11 @@ USE dietCheater_db;
 
 CREATE TABLE users(
   id INT NOT NULL AUTO_INCREMENT,
-  user_name VARCHAR(100) NOT NULL,
+  nickname VARCHAR(100) NOT NULL,
   name VARCHAR(100) NOT NULL,
   lastname VARCHAR(100) NOT NULL,
   email VARCHAR(100) NOT NULL,
+  password VARCHAR(100),
   weight-lb DECIMAL(10,2) NOT NULL,
   weight-kg DECIMAL(10,2) DEFAULT (COALESCE(weight-lb,0)*.45392),
   PRIMARY KEY (id)
