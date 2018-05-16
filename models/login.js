@@ -1,11 +1,15 @@
-function login(email, password, callback) {
+// Import MYSQL 
+var connection = require("../config/connection.js");
+
+/*function login(email, password, callback) {
   var connection = mysql({
     host: "localhost",
-    user: "me",
+    user: "root",
     password: "secret",
     database: "mydb"
-  });
+  });*/
 
+  function login(email, password, callback){
   connection.connect();
 
   var query =

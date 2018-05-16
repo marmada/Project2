@@ -1,0 +1,27 @@
+{
+  "name": "dietcheater",
+  "version": "1.0.0",
+  "description": "UofA Bootcamp / Project 2 / Express/Handlebars/SQL App",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marmada/Project2.git"
+  },
+  "keywords": [
+    "node.js",
+    "nutritionix",
+    "handlebars",
+    "express",
+    "mysql"
+  ],
+  "author": "dietcheater",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marmada/Project2/issues"
+  },
+  "homepage": "https://github.com/marmada/Project2#readme"
+}
