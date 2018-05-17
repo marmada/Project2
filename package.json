@@ -23,5 +23,20 @@
   "bugs": {
     "url": "https://github.com/marmada/Project2/issues"
   },
-  "homepage": "https://github.com/marmada/Project2#readme"
+  "homepage": "https://github.com/marmada/Project2#readme",
+  "dependencies": {
+    "colors": "^1.2.5",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "jsonwebtoken": "^8.2.1",
+    "lodash": "^4.17.10",
+    "mysql": "^2.15.0",
+    "nutritionix": "^0.6.1",
+    "nutritionix-api-data-utilities": "^2.2.1",
+    "passport": "^0.4.0",
+    "session": "^0.1.0"
+  }
 }
