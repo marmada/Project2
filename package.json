@@ -23,5 +23,13 @@
   "bugs": {
     "url": "https://github.com/marmada/Project2/issues"
   },
-  "homepage": "https://github.com/marmada/Project2#readme"
+  "homepage": "https://github.com/marmada/Project2#readme",
+  "dependencies": {
+    "colors": "^1.2.5",
+    "dotenv": "^5.0.1",
+    "lodash": "^4.17.10",
+    "nutritionix": "^0.6.1",
+    "nutritionix-api-data-utilities": "^2.2.1",
+    "request": "^2.86.0"
+  }
 }
