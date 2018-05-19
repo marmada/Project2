@@ -29,7 +29,7 @@ $(function() {
 
       var items = JSON.parse(response.list.item);
 
-      //For Loop to run 10 images through API Object
+      //For Loop to add 10 objects to dropdown menu
       for (var i = 0; i < items.length; i++) {
         //Setting Div to hold Image & Rating
         var foodchoices = $("<div class='newDiv'>");
@@ -42,32 +42,40 @@ $(function() {
 
   // Ajax to grab information from user login input for validation
 
-  $('#loginS').on("click", function(event) {
+  $('#register').on("click", function(event) {
 
     event.preventDefault();
 
     // get the form data & validate is not "blank"
   
-      var loginData = {
-        user: $('#email').val().trim(),
-        password: $('#password').val().trim()
+      var registerData = {
+        user: $('#email-2').val().trim(),
+        password: $('#password-2').val().trim(),
+        nickname: $('#nickname').val().trim(),
+        name: $('#name').val().trim(),
+        lastname: $('#lastname').val().trim(),
+        weight: $('#weight').val().trim(),
+        height: parseInt($('#height-ft').val())*12+parseInt($("#height-in"))
       };
       console.log(loginData);
 
-      if (loginData.user != '' && loginData.password != '') {
+      if (registerData.user != '' && registerData.password != '' && registerData.nickname!='') {
 
       // process the form
-      $.ajax('/login', {
+      $.ajax({
+        url:'/register', 
         type: 'POST',
-        data: loginData,
+        data: registerData,
+        dataType:'JSON'
       }).done(function() {
-        console.log('info to route for validation succesful');
+        console.log('info to route for registration succesful');
       });
     } else {
-      msg = 'Invalid username and password!';
+      msg = 'Please enter valid information!';
 
       $('#message').html(msg);
     }
   });
+  
   
 });
