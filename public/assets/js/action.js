@@ -15,7 +15,7 @@ $(function() {
     console.log(apikey);
 
     var queryURL =
-      'https://api.nal.usda.gov/ndb/search/?format=json&sort=r&max=10&offset=0&api_key=' +
+      'https://api.nal.usda.gov/ndb/search/?format=json&sort=r&max=20&offset=0&api_key=' +
       apikey +
       '&q=';
     var search = queryURL + query;
@@ -42,6 +42,39 @@ $(function() {
 
   // Ajax to grab information from user login input for validation
 
+  $('#loginS').on("click", function(event) {
+
+    event.preventDefault();
+
+    // get the form data & validate is not "blank"
+  
+      var loginData = {
+        user: $('#email').val().trim(),
+        password: $('#password').val().trim()
+      };
+      console.log(loginData);
+
+      if (loginData.user != '' && loginData.password != '') {
+
+      // process the form
+      $.ajax({
+        url:'/login', 
+        type: 'POST',
+        data: loginData,
+        dataType:'JSON'
+      }).done(function() {
+        console.log('info to route for validation succesful');
+      });
+    } else {
+      msg = 'Invalid username and password!';
+
+      $('#message').html(msg);
+    }
+  });
+
+
+  // Ajax to grab information from registration page input, creates user in database
+  
   $('#register').on("click", function(event) {
 
     event.preventDefault();
